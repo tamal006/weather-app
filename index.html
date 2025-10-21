@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <!-- header -->
+    <header>
+      <div class="homepage-header">
+        <h1 class="landing-text">WeatherNow</h1>
+      </div>
+    </header>
+
+    <!--main grin of weather app-->
+    <div class="container" >
+      <!--Input from the user-->
+      <div class="user-request">
+        <h2 class="Inp-header">Everyday Weather Forcast</h2>
+        <input
+          list="cities"
+          id="input"
+          placeholder="Enter or Select a city name"
+        />
+        <datalist id="cities">
+          <option value="CurrentLocation"></option>
+          <option value="Bangalore"></option>
+          <option value="Beijing"></option>
+          <option value="Chicago"></option>
+          <option value="Chennai"></option>
+          <option value="Delhi"></option>
+        </datalist>
+        <button class="currloc button">Current Location</button>
+        <button class="search button" id="ok">Search</button>
+        <!-- map -->
+        <div id="map"></div>
+      </div>
+      <!-- Main display of the app -->
+      <div class="main-container disp" >
+        <!-- Left side -->
+        <div class="left side">
+          <h3 class="cityName">Kolkata,In</h3>
+          <p><span class="valueL temp">38.04°C</span></p>
+          <div>
+            <p class="weather-Img-Name">
+              <img
+                  class="weather-Img"
+                  src="https://openweathermap.org/img/wn/10d@2x.png"
+                  alt="Weather Icon"
+                />
+              <span class="valueL weather">
+                Cloudy</span
+              >
+            </p>
+          </div>
+          <p><span class="valueL feels_like">Feels Like: 38.04°C</span></p>
+        </div>
+        <!-- Right side -->
+        <div class="right side">
+          <p>
+            <span class="valueR sunrise">Sunrise: 6:34 AM<i class="fas fa-sun" aria-hidden="true"></i
+            > </span>
+          </p>
+          <p>
+            <span class="valueR sunset"
+              >Sunset: 6:11 PM <i class="fas fa-moon" aria-hidden="true"></i
+            ></span>
+          </p>
+          <p>
+            <span class="valueR humidity"
+              >Humidity: 49% <i class="fas fa-tint" aria-hidden="true"></i
+            ></span>
+          </p>
+          <p>
+            <span class="valueR wind"
+              >Wind: 5.66 m/s <i class="fas fa-wind" aria-hidden="true"></i
+            ></span>
+          </p>
+          <p>
+            <span class="valueR visibility"
+              >Visibility: 3 km <i class="fas fa-eye" aria-hidden="true"></i
+            ></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

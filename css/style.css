@@ -1,0 +1,221 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: white;
+
+    }
+   
+    /* main weather page grid styling*/
+.background {
+      position:fixed;
+      inset: 0;
+      background: url('/src/backgroundImg.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: blur(2px) brightness(110%); /* blur + darken */
+      z-index: -1; /* keep behind content */
+    }
+
+/*Header styling*/
+.homepage-header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(126, 122, 122,0.09);
+      margin-top: 10px;
+      padding: 10px;
+}
+.landing-text{
+    font-size: 40px;
+}
+
+/* Navbar styling */
+
+@media (max-width: 500px) {
+    .homepage-header{
+      margin-top: 10px;
+      padding: 20px;
+}
+    .landing-text{
+    font-size: 46px;
+}
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+   /* Input from user styling */
+.user-request{
+    background-color: rgba(126, 122, 122,0.05);
+    backdrop-filter: blur(15px); /* frosted blur effect */
+      -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.03);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 300px;
+    gap: 20px;
+margin-top: 25px;
+/* tempurary */
+}
+.Inp-header{
+    text-align: center;
+}
+#input{
+    width: 90%;
+    height: 35px;
+    border-radius: 5px;
+    padding: 10px 0px 10px 9px;
+    border: 0px;
+}
+.button{
+    background:linear-gradient(90deg, #3464d3, #d0dd15) ;
+    padding: 11px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+     cursor: pointer;
+}
+ #map { 
+    width: 50%;
+    height: 30%;
+    border-radius: 80px;
+}
+
+/* main weather reasult styling */
+.main-container{
+     background-color: rgba(151, 151, 151, 0.05);
+    backdrop-filter: blur(15px); /* frosted blur effect */
+      -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 700px;
+    gap: 10px;
+    margin-top: 110px;
+}
+.side{
+     background-color: rgba(126, 122, 122,0.05);
+    backdrop-filter: blur(15px); /* frosted blur effect */
+      -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.03);
+    width: 45%;
+    height: 90%;
+    border-radius: 15px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+.weather-Img-Name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    
+}
+.cityName{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffd54f;
+    text-align: center;
+}
+
+.valueL{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.temp{
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #4176f3, #d6ec0e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.weather{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: capitalize;
+}
+
+.weather-Img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.feels-like{
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+.valueR{
+    font-size: 1.4rem;
+}
+.fas{
+    margin-left: 5px;
+}
+ .disp{
+        display: none;
+    }
+@media (max-width: 500px) {
+    .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user-request{
+    height: 46vh;
+    width: 300px;
+    gap: 10px;
+margin-top: 5px;
+/* tempurary */
+}
+#map { 
+    width: 40%;
+    height: 30%;
+    border-radius: 80px;
+}
+.main-container{
+     background-color: rgba(151, 151, 151, 0.0);
+    backdrop-filter: blur(0px); /* frosted blur effect */
+      -webkit-backdrop-filter: blur(0px);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+    flex-direction:column;
+    width: 700px;
+    gap: 0px;
+    margin-top: 80px;
+}
+}
